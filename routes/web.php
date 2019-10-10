@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomepageController@index')->name('homepage');
 
 Route::get('/merhaba', function () {
     return "Merhaba";
