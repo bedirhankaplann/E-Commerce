@@ -27,9 +27,10 @@ Route::get('/urun/{urunadi}', function ($urunadi) {
     return "Ürün : $urunadi";
 });
 
-Route::get('/urun2/{marka}/{id?}', function ($marka, $id = 0) {
+Route::get('/urun/{marka}/{id?}', function ($marka, $id = 0) {
     return "Urun : $marka - $id";
 });
+
 Route::get('/kampanya', function () {
     return redirect()->route('urun_detay');
 });
