@@ -6,6 +6,36 @@
 
         <title>Laravel / E-Ticaret</title>
     <body>
-        Merhaba
+        Merhaba {{ $name . ' ' . $surname }} <br>
+        <hr>
+        @php
+            $age = 30;
+        @endphp
+        @if($name == 'Bedirhan')
+            Sayın {{ $name . ' ' . $surname . ' ' . '(' . $age . ')'}}
+        @else
+            Kayıtlı Olmayan Kullanıcı
+        @endif
+        <hr>
+        @switch($name)
+            @case('Bedirhan')
+                Hoşgeldin Bedirhan
+                @break
+            @case('Sümeyye')
+                Hoşgeldin Sümeyye
+                @break
+            @default
+                Hoşgeldin
+        @endswitch
+        <hr>
+        @foreach($names as $name)
+            {{$name . ($name !== end($names) ? ', ' : ' ')}}
+        @endforeach
+        <hr>
+        {{--Yorum yaptım--}}
+    @php $html = "<b>Test</b>"; @endphp
+    {{ $html }}
+        <hr>
+    {!! $html !!}
     </body>
 </html>

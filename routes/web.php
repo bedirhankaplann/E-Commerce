@@ -13,22 +13,6 @@
 
 Route::get('/', 'HomepageController@index')->name('homepage');
 
-Route::get('/merhaba', function () {
-    return "Merhaba";
-});
-
-Route::get('/api/v1/merhaba', function () {
-    return ['mesaj' => 'Merhaba'];
-})->name('urun_detay');
-
-Route::get('/urun/{urunadi}', function ($urunadi) {
-    return "Ürün : $urunadi";
-});
-
-Route::get('/urun/{marka}/{id?}', function ($marka, $id = 0) {
-    return "Urun : $marka - $id";
-});
-
-Route::get('/kampanya', function () {
-    return redirect()->route('urun_detay');
-});
+Route::view('/kategori', 'kategori');
+Route::view('/urun', 'urun');
+Route::view('/sepet', 'sepet');
