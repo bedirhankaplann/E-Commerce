@@ -6,6 +6,8 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+//@import "node_modules/bootstrap-sass/assets/stylesheet/bootstrap";
+@import "commerce";
 
 .navbar-laravel {
     background-color: #fff;
